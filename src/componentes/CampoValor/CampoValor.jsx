@@ -4,7 +4,7 @@ import "./CampoValor.css";
 const CampoPreco = () => {
   const [valor, setValor] = useState("");
 
-  const handleChange = (event) => {
+  const aoDigitado = (event) => {
     const text = event.target.value;
     const regex = /^[0-9]*[.,]?[0-9]{0,2}$/;
     if (regex.test(text) || text === "") {
@@ -19,7 +19,7 @@ const CampoPreco = () => {
         type="text"
         placeholder="Digite o preço do produto"
         value={valor}
-        onChange={handleChange}
+        onChange={aoDigitado}
       />
     </div>
   );
