@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// ListaSuspensa.jsx
+import React from "react";
 import "./ListaSuspensa.css";
 
 const ListaSuspensa = (props) => {
@@ -9,9 +10,12 @@ const ListaSuspensa = (props) => {
   return (
     <div className="lista-suspensa">
       <label>{props.label}</label>
-      <select onChange={aoEscolhido}>
+      <select value={props.valor} onChange={aoEscolhido}>
+        <option value="">Selecione...</option>
         {props.itens.map((item) => (
-          <option key={item}>{item}</option>
+          <option key={item} value={item}>
+            {item}
+          </option>
         ))}
       </select>
     </div>
