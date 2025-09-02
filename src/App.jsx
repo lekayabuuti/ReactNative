@@ -6,31 +6,11 @@ function App() {
   const [produtos, setProdutos] = useState([]);
 
   const secoes = [
-    {
-      nome: "Computadores",
-      corPrimaria: "#57c278",
-      corSecundaria: "#d9f7e9",
-    },
-    {
-      nome: "Acessórios",
-      corPrimaria: "#82cffa",
-      corSecundaria: "#e8f8ff",
-    },
-    {
-      nome: "Impressoras",
-      corPrimaria: "#a6d157",
-      corSecundaria: "#f0f8e2",
-    },
-    {
-      nome: "Games",
-      corPrimaria: "#e06b69",
-      corSecundaria: "#fde7e8",
-    },
-    {
-      nome: "Gadgets",
-      corPrimaria: "#e06b69",
-      corSecundaria: "#fde7e8",
-    },
+    {nome: "Computadores", corFundo: "#4ec5a8"}, 
+    {nome: "Acessórios", corFundo: "#6fa9f0"},
+    {nome: "Impressoras", corFundo: "#57b5c2"},
+    {nome: "Games", corFundo: "#7aa7f0"},
+    {nome: "Gadgets", corFundo: "#82d1f7"}
   ];
 
   const listaSecoes = secoes.map((secao) => secao.nome);
@@ -42,7 +22,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="App">
       <Formulario
         secoes={listaSecoes}
         aoProdutoCadastrado={(produto) => adicionaProduto(produto)}
@@ -51,8 +31,7 @@ function App() {
         <Secao
           key={secao.nome}
           nome={secao.nome}
-          corPrimaria={secao.corPrimaria}
-          corSecundaria={secao.corSecundaria}
+          corFundo={secao.corFundo}
           produtos={produtos.filter((p) => p.secao === secao.nome)}
         />
       ))}

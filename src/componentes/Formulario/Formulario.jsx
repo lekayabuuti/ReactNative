@@ -15,16 +15,27 @@ const Formulario = (props) => {
   const marcas = ["HP", "Dell", "Positivo", "Asus", "Xing Ling genérico"];
 
   const aoSalvar = (evento) => {
-    evento.preventDefault()
-    props.aoProdutoCadastrado(
-      {
-      "nome" : nome,
-      "preco" : preco,
-      "secao" : secao,
-      "marca" : marca
-      }
-    );
-  }
+    evento.preventDefault();
+
+    if (!nome.trim() || !preco.trim() || !secao.trim() || !marca.trim()) {
+      alert(
+        "Por favor, preencha todos os campos antes de adicionar o produto!"
+      );
+      return;
+    }
+
+    props.aoProdutoCadastrado({
+      nome: nome,
+      preco: preco,
+      secao: secao,
+      marca: marca,
+    });
+
+    setNome("");
+    setPreco("");
+    setSecao("");
+    setMarca("");
+  };
 
   return (
     <section className="formulario">

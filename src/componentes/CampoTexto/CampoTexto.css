@@ -1,19 +1,35 @@
 .campo-texto {
-margin: 24px 0;
+  margin: 24px 0;
 }
 
 .campo-texto label {
-display: block;
-margin-bottom: 8px;
-font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
 }
 
 .campo-texto input {
-background-color: #FFF;
-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-width: 100%;
-border: none;
-font-size: 24px;
-padding: 24px;
-box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  color: #333;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  background: #fff;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(135deg, #57c278, #82cffa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.campo-texto input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
 }

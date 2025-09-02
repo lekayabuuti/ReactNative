@@ -1,72 +1,69 @@
+.secao {
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+}
+
+.secao h3 {
+  font-size: 32px;
+  border-bottom: 4px solid;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.secao .produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 32px;
+  margin-top: 32px;
+}
+
 .produto {
-width: 280px;
-}
-.produto .cabecalho {
-background-color: #F0F0F0;
-border-radius: 10px 10px 0px 0px;
-}
-.produto img {
-width: 100px;
-border-radius: 50%;
-position: relative;
-bottom: -50px;
-}
-.produto .rodape {
-background: #FFFFFF;
-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
-border-radius: 0px 0px 10px 10px;
-padding-top: 90px;
-padding-bottom: 40px;
-}
-.produto .rodape h4 {
-color: #6278F7;
-font-size: 18px;
-line-height: 22px;
-font-weight: bold;
-margin-bottom: 8px;
-}
-.produto .rodape h5 {
-font-size: 18px;
-line-height: 22px;
-color: #212121;
-padding: 0 16px;
-}
-
-.lista {
-  padding: 20px;
-}
-
-.grid-produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.card-produto {
-  background: #fff;
-  border: 1px solid #ddd;
+  width: 280px;
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #2f9d85, #4ec5a8); 
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-produto .info {
-  margin-bottom: 12px;
-}
-
-.logo-box {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 80px; 
+  overflow: visible;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.logo-marca {
-  max-width: 80px;
-  max-height: 80px;
-  object-fit: contain;
+.produto .cabecalho {
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.produto img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #fff;
+  margin-top: -50px; 
+}
+
+.produto .rodape {
+  padding: 16px;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+.produto .rodape h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.produto .rodape h5 {
+  font-size: 16px;
+  margin: 0;
+  color: #e0f7f1;
 }

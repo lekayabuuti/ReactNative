@@ -5,6 +5,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <div className="cabecalho-app">Cadastro de Produtos</div>
     <App />
   </StrictMode>,
 )
